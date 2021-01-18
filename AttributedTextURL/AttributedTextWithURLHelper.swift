@@ -14,9 +14,15 @@ public enum AttributedTextWithURLHelper {
         styleAttributes: [NSAttributedString.Key: Any],
         link: LinkInfo
     ) -> NSMutableAttributedString {
-        let attributedText = NSMutableAttributedString(string: text, attributes: styleAttributes)
-        let linkRange = NSString(string: text).range(of: link.text)
-        attributedText.addAttribute(.link, value: link.urlAddress, range: linkRange)
+        let formattedText = String(format: text, link.text)
+        let attributedText = NSMutableAttributedString(string: formattedText, attributes: styleAttributes)
+        
+        guard let urlAddress = URL(string: link.urlAddress) else {
+            return attributedText
+        }
+        
+        let linkRange = NSString(string: formattedText).range(of: link.text)
+        attributedText.addAttribute(.link, value: urlAddress, range: linkRange)
         return attributedText
     }
     
@@ -25,10 +31,16 @@ public enum AttributedTextWithURLHelper {
         styleAttributes: [NSAttributedString.Key: Any],
         multipleLinks: [LinkInfo]
     ) -> NSMutableAttributedString {
-        let attributedText = NSMutableAttributedString(string: text, attributes: styleAttributes)
+        let formattedFullText = String(format: text, arguments: multipleLinks.map { $0.text as CVarArg })
+        let attributedText = NSMutableAttributedString(string: formattedFullText, attributes: styleAttributes)
+        
         for link in multipleLinks {
-            let linkRange = NSString(string: text).range(of: link.text)
-            attributedText.addAttribute(.link, value: link.urlAddress, range: linkRange)
+            guard let urlAddress = URL(string: link.urlAddress) else {
+                return attributedText
+            }
+            
+            let linkRange = NSString(string: formattedFullText).range(of: link.text)
+            attributedText.addAttribute(.link, value: urlAddress, range: linkRange)
         }
         return attributedText
     }

@@ -40,49 +40,27 @@ final class Presenter: Presenting {
     }
     
     func setupAttributedText() {
-        guard let urlAddress = URL(string: Constants.UrlAddress.git.rawValue) else {
-            return
-        }
-        
-        let formattedFullText = String(
-            format: Constants.SimpleText.singleLink.rawValue,
-            Constants.LinkText.git.rawValue
-        )
-        
         let attributedText = AttributedTextWithURLHelper.getAttributedStringWithSingleURL(
-            text: formattedFullText,
+            text: Constants.SimpleText.singleLink.rawValue,
             styleAttributes: [
                 .font: UIFont.systemFont(ofSize: 16),
                 .foregroundColor: UIColor.black
             ],
-            link: LinkInfo(text: Constants.LinkText.git.rawValue, urlAddress: urlAddress)
+            link: LinkInfo(text: Constants.LinkText.git.rawValue, urlAddress: Constants.UrlAddress.git.rawValue)
         )
         viewController?.setAttributedText(with: attributedText)
     }
     
     func setupAttributedTextMultipleLinks() {
-        guard
-            let gitUrlAddress = URL(string: Constants.UrlAddress.git.rawValue),
-            let mediumUrlAddress = URL(string: Constants.UrlAddress.medium.rawValue)
-        else {
-            return
-        }
-        
-        let formattedFullText = String(
-            format: Constants.SimpleText.multipleLinks.rawValue,
-            Constants.LinkText.git.rawValue,
-            Constants.LinkText.medium.rawValue
-        )
-        
         let attributedText = AttributedTextWithURLHelper.getAttributedStringWithMultipleURLs(
-            text: formattedFullText,
+            text: Constants.SimpleText.multipleLinks.rawValue,
             styleAttributes: [
                 .font: UIFont.systemFont(ofSize: 16),
                 .foregroundColor: UIColor.black
             ],
             multipleLinks: [
-                LinkInfo(text: Constants.LinkText.git.rawValue, urlAddress: gitUrlAddress),
-                LinkInfo(text: Constants.LinkText.medium.rawValue, urlAddress: mediumUrlAddress)
+                LinkInfo(text: Constants.LinkText.git.rawValue, urlAddress: Constants.UrlAddress.git.rawValue),
+                LinkInfo(text: Constants.LinkText.medium.rawValue, urlAddress: Constants.UrlAddress.medium.rawValue)
             ]
         )
         viewController?.setAttributedTextOfMultipleLinks(with: attributedText)

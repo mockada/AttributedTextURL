@@ -9,9 +9,9 @@ import Foundation
 
 public struct LinkInfo {
     let text: String
-    let urlAddress: URL
+    let urlAddress: String
     
-    public init(text: String, urlAddress: URL) {
+    public init(text: String, urlAddress: String) {
         self.text = text
         self.urlAddress = urlAddress
     }

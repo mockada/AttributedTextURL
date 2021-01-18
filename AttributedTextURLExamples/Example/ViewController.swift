@@ -65,7 +65,8 @@ final class ViewController: UIViewController {
     
     func setupContraints() {
         NSLayoutConstraint.activate([
-            textView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             textView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -16)
         ])
         
