@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public enum AttributedTextWithURLHelper {
-    public static func getAttributedTextWithURL(
+    public static func getAttributedStringWithSingleURL(
         text: String,
         styleAttributes: [NSAttributedString.Key: Any],
         link: LinkInfo
@@ -20,7 +20,7 @@ public enum AttributedTextWithURLHelper {
         return attributedText
     }
     
-    public static func getAttributedTextWithMultipleURLs(
+    public static func getAttributedStringWithMultipleURLs(
         text: String,
         styleAttributes: [NSAttributedString.Key: Any],
         multipleLinks: [LinkInfo]

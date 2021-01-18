@@ -14,11 +14,11 @@ enum Constants {
         case git = "https://github.com/dejacs"
         case medium = "https://jadecsilveira.medium.com/"
     }
-    enum TextViewFullText: String {
-        case singleLink = "Para mais informações, visite o GitHub."
-        case multipleLinks = "Para mais informações, visite o GitHub ou o Medium."
+    enum SimpleText: String {
+        case singleLink = "Para mais informações, visite o %@."
+        case multipleLinks = "Para mais informações, visite o %@ ou o %@."
     }
-    enum TextViewLinkText: String {
+    enum LinkText: String {
         case git = "GitHub"
         case medium = "Medium"
     }
@@ -44,13 +44,18 @@ final class Presenter: Presenting {
             return
         }
         
-        let attributedText = AttributedTextWithURLHelper.getAttributedTextWithURL(
-            text: Constants.TextViewFullText.singleLink.rawValue,
+        let formattedFullText = String(
+            format: Constants.SimpleText.singleLink.rawValue,
+            Constants.LinkText.git.rawValue
+        )
+        
+        let attributedText = AttributedTextWithURLHelper.getAttributedStringWithSingleURL(
+            text: formattedFullText,
             styleAttributes: [
                 .font: UIFont.systemFont(ofSize: 16),
                 .foregroundColor: UIColor.black
             ],
-            link: LinkInfo(text: Constants.TextViewLinkText.git.rawValue, urlAddress: urlAddress)
+            link: LinkInfo(text: Constants.LinkText.git.rawValue, urlAddress: urlAddress)
         )
         viewController?.setAttributedText(with: attributedText)
     }
@@ -63,15 +68,21 @@ final class Presenter: Presenting {
             return
         }
         
-        let attributedText = AttributedTextWithURLHelper.getAttributedTextWithMultipleURLs(
-            text: Constants.TextViewFullText.multipleLinks.rawValue,
+        let formattedFullText = String(
+            format: Constants.SimpleText.multipleLinks.rawValue,
+            Constants.LinkText.git.rawValue,
+            Constants.LinkText.medium.rawValue
+        )
+        
+        let attributedText = AttributedTextWithURLHelper.getAttributedStringWithMultipleURLs(
+            text: formattedFullText,
             styleAttributes: [
                 .font: UIFont.systemFont(ofSize: 16),
                 .foregroundColor: UIColor.black
             ],
             multipleLinks: [
-                LinkInfo(text: Constants.TextViewLinkText.git.rawValue, urlAddress: gitUrlAddress),
-                LinkInfo(text: Constants.TextViewLinkText.medium.rawValue, urlAddress: mediumUrlAddress)
+                LinkInfo(text: Constants.LinkText.git.rawValue, urlAddress: gitUrlAddress),
+                LinkInfo(text: Constants.LinkText.medium.rawValue, urlAddress: mediumUrlAddress)
             ]
         )
         viewController?.setAttributedTextOfMultipleLinks(with: attributedText)
