@@ -9,11 +9,12 @@ This library helps to create AttributedString with one or more links, for layout
                    DESC
 
   spec.homepage     = "https://github.com/dejacs/AttributedTextURL"
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Jade Silveira" => "jadecs8@gmail.com" }
 
-  spec.platform     = :ios
+  spec.ios.deployment_target = "12.1"
+  spec.swift_version = "4.2"
 
-  spec.source       = { :git => "https://github.com/dejacs/AttributedTextURL", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/dejacs/AttributedTextURL.git", :tag => "#{spec.version}" }
   spec.source_files  = "AttributedTextURL/**/*.{h,m,swift}"
 end
