@@ -16,6 +16,12 @@
 		1DAA2E3325B4CDB7004B76AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA2E3125B4CDB7004B76AA /* Main.storyboard */; };
 		1DAA2E3525B4CDBD004B76AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA2E3425B4CDBD004B76AA /* Assets.xcassets */; };
 		1DAA2E3825B4CDBD004B76AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DAA2E3625B4CDBD004B76AA /* LaunchScreen.storyboard */; };
+		1DAA2E4125B4D0FF004B76AA /* AttributedTextWithURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E4025B4D0FF004B76AA /* AttributedTextWithURLHelper.swift */; };
+		1DAA2E4625B4E28E004B76AA /* LinkText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E4525B4E28E004B76AA /* LinkText.swift */; };
+		1DAA2E4E25B4EBA1004B76AA /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E4D25B4EBA1004B76AA /* Interactor.swift */; };
+		1DAA2E5625B4F19A004B76AA /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E5525B4F19A004B76AA /* Presenter.swift */; };
+		1DAA2E5E25B4F69C004B76AA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E5D25B4F69C004B76AA /* Coordinator.swift */; };
+		1DAA2E6325B4FBF3004B76AA /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E6225B4FBF3004B76AA /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,12 @@
 		1DAA2E3425B4CDBD004B76AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DAA2E3725B4CDBD004B76AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DAA2E3925B4CDBD004B76AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DAA2E4025B4D0FF004B76AA /* AttributedTextWithURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextWithURLHelper.swift; sourceTree = "<group>"; };
+		1DAA2E4525B4E28E004B76AA /* LinkText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkText.swift; sourceTree = "<group>"; };
+		1DAA2E4D25B4EBA1004B76AA /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		1DAA2E5525B4F19A004B76AA /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		1DAA2E5D25B4F69C004B76AA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1DAA2E6225B4FBF3004B76AA /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,8 @@
 			children = (
 				1DAA2E0C25B4CC9A004B76AA /* AttributedTextURL.h */,
 				1DAA2E0D25B4CC9A004B76AA /* Info.plist */,
+				1DAA2E4025B4D0FF004B76AA /* AttributedTextWithURLHelper.swift */,
+				1DAA2E4525B4E28E004B76AA /* LinkText.swift */,
 			);
 			path = AttributedTextURL;
 			sourceTree = "<group>";
@@ -112,15 +126,27 @@
 		1DAA2E2A25B4CDB7004B76AA /* AttributedTextURLExamples */ = {
 			isa = PBXGroup;
 			children = (
+				1DAA2E6725B50C18004B76AA /* Example */,
 				1DAA2E2B25B4CDB7004B76AA /* AppDelegate.swift */,
 				1DAA2E2D25B4CDB7004B76AA /* SceneDelegate.swift */,
-				1DAA2E2F25B4CDB7004B76AA /* ViewController.swift */,
 				1DAA2E3125B4CDB7004B76AA /* Main.storyboard */,
 				1DAA2E3425B4CDBD004B76AA /* Assets.xcassets */,
 				1DAA2E3625B4CDBD004B76AA /* LaunchScreen.storyboard */,
 				1DAA2E3925B4CDBD004B76AA /* Info.plist */,
 			);
 			path = AttributedTextURLExamples;
+			sourceTree = "<group>";
+		};
+		1DAA2E6725B50C18004B76AA /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				1DAA2E4D25B4EBA1004B76AA /* Interactor.swift */,
+				1DAA2E5525B4F19A004B76AA /* Presenter.swift */,
+				1DAA2E5D25B4F69C004B76AA /* Coordinator.swift */,
+				1DAA2E2F25B4CDB7004B76AA /* ViewController.swift */,
+				1DAA2E6225B4FBF3004B76AA /* Factory.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +227,7 @@
 				TargetAttributes = {
 					1DAA2E0825B4CC9A004B76AA = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					1DAA2E1125B4CC9B004B76AA = {
 						CreatedOnToolsVersion = 12.3;
@@ -262,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DAA2E4625B4E28E004B76AA /* LinkText.swift in Sources */,
+				1DAA2E4125B4D0FF004B76AA /* AttributedTextWithURLHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +308,11 @@
 			files = (
 				1DAA2E3025B4CDB7004B76AA /* ViewController.swift in Sources */,
 				1DAA2E2C25B4CDB7004B76AA /* AppDelegate.swift in Sources */,
+				1DAA2E5E25B4F69C004B76AA /* Coordinator.swift in Sources */,
+				1DAA2E4E25B4EBA1004B76AA /* Interactor.swift in Sources */,
 				1DAA2E2E25B4CDB7004B76AA /* SceneDelegate.swift in Sources */,
+				1DAA2E5625B4F19A004B76AA /* Presenter.swift in Sources */,
+				1DAA2E6325B4FBF3004B76AA /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +471,7 @@
 		1DAA2E1E25B4CC9B004B76AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2W8RYDG9HE;
@@ -454,6 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jadelibs.AttributedTextURL;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +497,7 @@
 		1DAA2E1F25B4CC9B004B76AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2W8RYDG9HE;
@@ -486,6 +522,7 @@
 		1DAA2E2125B4CC9B004B76AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W8RYDG9HE;
 				INFOPLIST_FILE = AttributedTextURLTests/Info.plist;
@@ -504,6 +541,7 @@
 		1DAA2E2225B4CC9B004B76AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W8RYDG9HE;
 				INFOPLIST_FILE = AttributedTextURLTests/Info.plist;
