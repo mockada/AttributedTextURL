@@ -12,7 +12,7 @@ public enum AttributedTextWithURLHelper {
     public static func getAttributedTextWithURL(
         text: String,
         styleAttributes: [NSAttributedString.Key: Any],
-        link: LinkText
+        link: LinkInfo
     ) -> NSMutableAttributedString {
         let attributedText = NSMutableAttributedString(string: text, attributes: styleAttributes)
         let linkRange = NSString(string: text).range(of: link.text)
@@ -23,7 +23,7 @@ public enum AttributedTextWithURLHelper {
     public static func getAttributedTextWithMultipleURLs(
         text: String,
         styleAttributes: [NSAttributedString.Key: Any],
-        multipleLinks: [LinkText]
+        multipleLinks: [LinkInfo]
     ) -> NSMutableAttributedString {
         let attributedText = NSMutableAttributedString(string: text, attributes: styleAttributes)
         for link in multipleLinks {
