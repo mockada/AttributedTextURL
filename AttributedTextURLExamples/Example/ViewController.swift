@@ -14,7 +14,7 @@ protocol Displaying: AnyObject {
 }
 
 final class ViewController: UIViewController {
-    let interactor: Interacting
+    let presenter: Presenting
     
     private lazy var textView: UITextView = {
         let text = UITextView()
@@ -34,8 +34,8 @@ final class ViewController: UIViewController {
         return text
     }()
     
-    init(interactor: Interacting) {
-        self.interactor = interactor
+    init(presenter: Presenting) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -78,7 +78,7 @@ final class ViewController: UIViewController {
     }
     
     func setupAttributedText() {
-        interactor.setupAttributedText()
+        presenter.setupAttributedText()
         textView.delegate = self
         textView.linkTextAttributes = [
             .font: UIFont.systemFont(ofSize: 16),
@@ -88,7 +88,7 @@ final class ViewController: UIViewController {
     }
     
     func setupMultipleLinksTextAttributes() {
-        interactor.setupAttributedTextMultipleLinks()
+        presenter.setupAttributedTextMultipleLinks()
         textViewMultipleLinks.delegate = self
         textViewMultipleLinks.linkTextAttributes = [
             .font: UIFont.systemFont(ofSize: 16),
@@ -105,7 +105,7 @@ extension ViewController: UITextViewDelegate {
         in characterRange: NSRange,
         interaction: UITextItemInteraction
     ) -> Bool {
-        interactor.showLinkRedirect(url: URL)
+        presenter.showLinkRedirect(url: URL)
         return false
     }
 }

@@ -11,9 +11,7 @@ enum Factory {
     static func make() -> ViewController {
         let coordinator: Coordinating = Coordinator()
         let presenter: Presenting = Presenter(coordinator: coordinator)
-        let interactor: Interacting = Interactor(presenter: presenter)
-        
-        let viewController = ViewController(interactor: interactor)
+        let viewController = ViewController(presenter: presenter)
         
         presenter.viewController = viewController
         coordinator.viewController = viewController

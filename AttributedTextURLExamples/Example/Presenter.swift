@@ -13,7 +13,7 @@ protocol Presenting: AnyObject {
     var viewController: Displaying? { get set }
     func setupAttributedText()
     func setupAttributedTextMultipleLinks()
-    func nextStep(action: CoordinatorAction)
+    func showLinkRedirect(url: URL)
 }
 
 final class Presenter: Presenting {
@@ -33,8 +33,7 @@ final class Presenter: Presenting {
             text: "Para mais informações, visite o github.",
             styleAttributes: [
                 .font: UIFont.systemFont(ofSize: 16),
-                .foregroundColor: UIColor.black,
-                .paragraphStyle: NSMutableParagraphStyle()
+                .foregroundColor: UIColor.black
             ],
             link: LinkText(text: "github", urlAddress: urlAddress)
         )
@@ -53,8 +52,7 @@ final class Presenter: Presenting {
             text: "Para mais informações, visite o github ou o medium.",
             styleAttributes: [
                 .font: UIFont.systemFont(ofSize: 16),
-                .foregroundColor: UIColor.black,
-                .paragraphStyle: NSMutableParagraphStyle()
+                .foregroundColor: UIColor.black
             ],
             multipleLinks: [
                 LinkText(text: "github", urlAddress: gitUrlAddress),
@@ -64,7 +62,7 @@ final class Presenter: Presenting {
         viewController?.setAttributedTextOfMultipleLinks(with: attributedText)
     }
     
-    func nextStep(action: CoordinatorAction) {
-        coordinator.nextStep(action: action)
+    func showLinkRedirect(url: URL) {
+        coordinator.nextStep(action: .open(url: url))
     }
 }
