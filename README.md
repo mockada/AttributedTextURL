@@ -5,6 +5,10 @@
 There are many designed app screens that have a text with a link in the middle of it. Thus, in order to ease its implementation, this library was made to provide a formatted `NSMutableAttributedString` to be configured in your `UITextView`.
 
 This is the step-by-step:
+- Add this line in your Podfile and run `pod install`:
+```
+pod 'AttributedTextURL', '~> 0.0.2'
+```
 - Create an `UITextView`, such as:
 ```
 private lazy var textView: UITextView = {
@@ -54,3 +58,5 @@ Any doubts? Here is an example of usage: https://github.com/dejacs/AttributedTex
 Also, you can contact me here: https://twitter.com/Mockada
 
 Hope you enjoy it :sparkles:
+
+Cocoapods link: https://cocoapods.org/pods/AttributedTextURL
