@@ -48,7 +48,7 @@ final class ViewController: UIViewController {
         
         configureView()
         buildHierarchy()
-        setupContraints()
+        setupConstraints()
         
         setupAttributedText()
         setupMultipleLinksTextAttributes()
@@ -63,7 +63,7 @@ final class ViewController: UIViewController {
         view.addSubview(textViewMultipleLinks)
     }
     
-    func setupContraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
