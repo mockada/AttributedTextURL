@@ -7,7 +7,7 @@ There are many designed app screens that have a text with a link in the middle o
 This is the step-by-step:
 - Add this line in your Podfile and run `pod install`:
 ```
-pod 'AttributedTextURL', '~> 0.0.3'
+pod 'AttributedTextURL', '~> 0.0.4'
 ```
 - Create an `UITextView`, such as:
 ```
