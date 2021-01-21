@@ -13,7 +13,7 @@ This library helps to create AttributedString with one or more links, for layout
   spec.author             = { "Jade Silveira" => "jadecs8@gmail.com" }
 
   spec.ios.deployment_target = "12.1"
-  spec.swift_version = "4.2"
+  spec.swift_version = "5.1"
 
   spec.source       = { :git => "https://github.com/dejacs/AttributedTextURL.git", :tag => "#{spec.version}" }
   spec.source_files  = "AttributedTextURL/**/*.{h,m,swift}"
