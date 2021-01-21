@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DAA2E1325B4CC9B004B76AA /* AttributedTextURL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAA2E0925B4CC9A004B76AA /* AttributedTextURL.framework */; };
 		1DAA2E2C25B4CDB7004B76AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E2B25B4CDB7004B76AA /* AppDelegate.swift */; };
 		1DAA2E2E25B4CDB7004B76AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E2D25B4CDB7004B76AA /* SceneDelegate.swift */; };
 		1DAA2E3025B4CDB7004B76AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E2F25B4CDB7004B76AA /* ViewController.swift */; };
@@ -18,20 +17,9 @@
 		1DAA2E6325B4FBF3004B76AA /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA2E6225B4FBF3004B76AA /* Factory.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1DAA2E1425B4CC9B004B76AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1DAA2E0025B4CC9A004B76AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1DAA2E0825B4CC9A004B76AA;
-			remoteInfo = AttributedTextURL;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1DAA2E0925B4CC9A004B76AA /* AttributedTextURL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AttributedTextURL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DAA2E0D25B4CC9A004B76AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DAA2E1225B4CC9B004B76AA /* AttributedTextURLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttributedTextURLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DAA2E2925B4CDB7004B76AA /* AttributedTextURLExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttributedTextURLExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DAA2E2B25B4CDB7004B76AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DAA2E2D25B4CDB7004B76AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,14 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DAA2E0F25B4CC9B004B76AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DAA2E1325B4CC9B004B76AA /* AttributedTextURL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				1DAA2E0925B4CC9A004B76AA /* AttributedTextURL.framework */,
-				1DAA2E1225B4CC9B004B76AA /* AttributedTextURLTests.xctest */,
 				1DAA2E2925B4CDB7004B76AA /* AttributedTextURLExamples.app */,
 			);
 			name = Products;
@@ -152,24 +131,6 @@
 			productReference = 1DAA2E0925B4CC9A004B76AA /* AttributedTextURL.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1DAA2E1125B4CC9B004B76AA /* AttributedTextURLTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DAA2E2025B4CC9B004B76AA /* Build configuration list for PBXNativeTarget "AttributedTextURLTests" */;
-			buildPhases = (
-				1DAA2E0E25B4CC9B004B76AA /* Sources */,
-				1DAA2E0F25B4CC9B004B76AA /* Frameworks */,
-				1DAA2E1025B4CC9B004B76AA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1DAA2E1525B4CC9B004B76AA /* PBXTargetDependency */,
-			);
-			name = AttributedTextURLTests;
-			productName = AttributedTextURLTests;
-			productReference = 1DAA2E1225B4CC9B004B76AA /* AttributedTextURLTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		1DAA2E2825B4CDB7004B76AA /* AttributedTextURLExamples */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DAA2E3A25B4CDBD004B76AA /* Build configuration list for PBXNativeTarget "AttributedTextURLExamples" */;
@@ -200,9 +161,6 @@
 						CreatedOnToolsVersion = 12.3;
 						LastSwiftMigration = 1230;
 					};
-					1DAA2E1125B4CC9B004B76AA = {
-						CreatedOnToolsVersion = 12.3;
-					};
 					1DAA2E2825B4CDB7004B76AA = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -222,7 +180,6 @@
 			projectRoot = "";
 			targets = (
 				1DAA2E0825B4CC9A004B76AA /* AttributedTextURL */,
-				1DAA2E1125B4CC9B004B76AA /* AttributedTextURLTests */,
 				1DAA2E2825B4CDB7004B76AA /* AttributedTextURLExamples */,
 			);
 		};
@@ -230,13 +187,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		1DAA2E0725B4CC9A004B76AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DAA2E1025B4CC9B004B76AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,13 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DAA2E0E25B4CC9B004B76AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1DAA2E2525B4CDB7004B76AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,14 +226,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1DAA2E1525B4CC9B004B76AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1DAA2E0825B4CC9A004B76AA /* AttributedTextURL */;
-			targetProxy = 1DAA2E1425B4CC9B004B76AA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DAA2E1B25B4CC9B004B76AA /* Debug */ = {
@@ -466,44 +401,6 @@
 			};
 			name = Release;
 		};
-		1DAA2E2125B4CC9B004B76AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2W8RYDG9HE;
-				INFOPLIST_FILE = AttributedTextURLTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jadelibs.AttributedTextURLTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1DAA2E2225B4CC9B004B76AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2W8RYDG9HE;
-				INFOPLIST_FILE = AttributedTextURLTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jadelibs.AttributedTextURLTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		1DAA2E3B25B4CDBD004B76AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -559,15 +456,6 @@
 			buildConfigurations = (
 				1DAA2E1E25B4CC9B004B76AA /* Debug */,
 				1DAA2E1F25B4CC9B004B76AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1DAA2E2025B4CC9B004B76AA /* Build configuration list for PBXNativeTarget "AttributedTextURLTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DAA2E2125B4CC9B004B76AA /* Debug */,
-				1DAA2E2225B4CC9B004B76AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
