@@ -18,7 +18,6 @@ This library helps to create AttributedString with one or more links, for layout
   spec.source       = { :git => "https://github.com/dejacs/AttributedTextURL.git", :tag => "#{spec.version}" }
   spec.source_files  = "AttributedTextURL/**/*.{h,m,swift}"
 
-  spec.additional_guides:
-     - https://github.com/dejacs/AttributedTextURL/blob/main/README.md
+  spec.documentation_url = "https://github.com/dejacs/AttributedTextURL/blob/main/README.md"
 
 end
